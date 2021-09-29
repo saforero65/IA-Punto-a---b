@@ -1,24 +1,116 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aplicación de Búsquedas Rutas pro Colombia (A-B)</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Carlos Gutierrez">
+  <title>Aplicación de Búsquedas Rutas pro Colombia (A-B)</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <style>
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+  <!-- Custom styles for this template -->
+  <link href="cover.css" rel="stylesheet">
+
 </head>
 
-<body>
-    <header>
-        <h1>Aplicación de Búsquedas Rutas pro Colombia (A-B)</h1>
+<body class="text-center">
+
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+      <div class="inner">
+        <h3 class="masthead-brand">Rutas pro Colombia (A-B)</h3>
+        <nav class="nav nav-masthead justify-content-center">
+
+          <button type="button" class="btn btn-light" data-toggle="modal"
+            data-target="#exampleModalScrollable">Info</button>
+        </nav>
+
+      </div>
+
     </header>
-    <main>
-        <img src="img/co.svg" alt="mapa colombia">
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-dark font-weight-bold" id="exampleModalScrollableTitle">Info</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-dark text-justify" style="text-shadow:none">
+            <h5>Aplicación de Búsquedas Rutas pro Colombia (A-B)</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo maxime architecto itaque debitis molestiae
+              pariatur suscipit distinctio minima corporis atque consequatur vel laborum iste amet, nobis sint veniam
+              deleniti harum!</p>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main role="main" class="inner cover">
+
+      <div id="colombia" class="map tall text-left"></div>
+
+      <div class="card fixed-bottom" style="margin:10px;text-shadow:none">
+        <div class="card-body" style="padding:0px;">
+          <table class="table">
+
+          </table>
+        </div>
+      </div>
+
+
     </main>
-    <footer>
-        <p>Trabajo de I.A Aplicación de Búsquedas Rutas pro Colombia (A-B)</p>
+
+    <footer class="mastfoot mt-auto">
+
+      <div class="inner">
+        <p>Desarrollado por Gabriela Leon, Natalia Gómez , Santiago Forero y Vanessa Escobar <a
+            href="https://github.com/saforero65/IA-Punto-a---b.git/">https://github.com/saforero65/IA-Punto-a---b.git</a>
+          2020.</p>
+      </div>
     </footer>
+  </div>
+
+
+  <div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+  </div>
+
+
+
+  <!-- Optional JavaScript -->
+
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+  <script src="https://rawgit.com/Anujarya300/bubble_maps/master/data/geography-data/datamaps.none.js"></script>
+  <script src="app.js"></script>
+
 </body>
 
 </html>
