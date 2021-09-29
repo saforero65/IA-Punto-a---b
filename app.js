@@ -4,12 +4,6 @@ var map = new Datamap({
   responsive: true, //if true, call `resize()` on the map object when it should adjust it's size
   done: function () {}, //callback when the map is done drawing
 
-  //dataType: 'csv', //for use with dataUrl, currently 'json' or 'csv'. CSV should have an `id` column
-  //dataUrl: '', //if not null, datamaps will attempt to fetch this based on dataType ( default: json )
-  dataType: "csv",
-  dataUrl: "col-data.csv",
-  data: {},
-
   fills: {
     def: "#dddddd",
     C1: "#ffa4a9",
