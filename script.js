@@ -1,10 +1,11 @@
 import { red } from "./capitales_JSON.js";
 
-let cap_inicio = "medellin";
-let cap_final = "bogota";
+let cap_inicio = "bogota";
+let cap_final = "medellin";
 let encontrado = false;
 let visitados = new Array();
 let lista = new Array();
+let sinconex = new Array();
 let i = 0;
 
 encontrarNodo(cap_inicio);
@@ -64,10 +65,23 @@ while (visitados.length != 0 && encontrado == false) {
     // console.log(visitados);
     // console.log(lista);
   } else {
-    console.log(visitados);
+    
     console.log(lista);
-    console.log(visitados[visitados.length - 2]);
+    //visitados.pop(visitados[visitados.length - 3]);
+    sinconex.push(visitados[visitados.length - 1]);
+    
+    while(sinconex.includes(visitados[visitados.length - 1])){
+      visitados.pop(visitados[visitados.length - 1])
+      console.log(sinconex);
+      console.log(visitados);
+    }
+    
+    
+  }
+  if (visitados[visitados.length - 1].Capital == cap_final ){
+    encontrado = true;
   }
 
-  if (i == 17) break;
 }
+console.log("yaaaa");
+console.log(visitados);
