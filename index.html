@@ -7,6 +7,8 @@
   <meta name="description" content="">
   <meta name="author" content="Carlos Gutierrez">
   <title>Aplicación de búsquedas rutas por Colombia (A-B)</title>
+  <script type="text/javascript" src="eventos.js"></script>
+  <script type="module" src="script.js"></script>
   
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -76,19 +78,27 @@
           </table>
         </div>
       </div>
+      
+      <!-- <script>
+        var getData = function(){
+          var icap = document.getElementById("icap").value;
+          var fcap = document.getElementById("fcap").value;
+          console.log(icap+" "+fcap);
+        }
+        // export let variables = JSON.parse(JSON.stringify(}getData));
+        // export {icap, fcap}
+      </script> -->
 
       <form id="Capitales" action =""> 
         <label for="icap"> Inicio: </label>
-        <input type="text" id="icap" name="icap">
+        <input type="text" id="icap">
         <label for="fcap"> Final: </label>
-        <input type="text" id="fcap" name="fcap"><br>
-        <button type="button" onclick="getData()"> enviar </button>
+        <input type="text" id="fcap"><br>
+        <input type="submit" value="enviar">
+        <!-- <button type="button" onclick="getData()"> enviar </button> -->
       </form>
 
-
     </main>
-
-
 
     <footer class="mastfoot mt-auto">
 
@@ -122,8 +132,9 @@
   <script src="app.js"></script>
   <!-- <script type="text/javascript" src="capitales.json"></script> -->
   <!-- <script type="text/javascript" src="busqueda-profundidad.js"></script> -->
-  <!-- <script type="text/javascript" src="script.js"></script> -->
-  <script type="module" src="script.js"></script>
+
+
+
 
 </body>
 

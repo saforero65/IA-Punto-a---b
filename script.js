@@ -1,13 +1,11 @@
+import { inicioCap, finalCap } from "./eventos.js";
 import { red } from "./capitales_JSON.js";
 
-var getData = function(){
-  var icap = document.getElementById("icap").value();
-  var fcap = document.getElementById("fcap").value();
-  console.log(icap+" "+fcap);
-}
+console.log(inicioCap);
+console.log(finalCap);
 
-let cap_inicio = "bogota";
-let cap_final = "medellin";
+let cap_inicio = "medellin";
+let cap_final = "bogota";
 let encontrado = false;
 let visitados = new Array();
 let lista = new Array();
