@@ -1,5 +1,11 @@
 import { red } from "./capitales_JSON.js";
 
+var getData = function(){
+  var icap = document.getElementById("icap").value();
+  var fcap = document.getElementById("fcap").value();
+  console.log(icap+" "+fcap);
+}
+
 let cap_inicio = "bogota";
 let cap_final = "medellin";
 let encontrado = false;
