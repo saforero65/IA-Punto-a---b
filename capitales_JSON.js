@@ -7,16 +7,16 @@ var jsonTexto = [
     Capital: "medellin",
     Conexion: [
       {
-        tunja: "1",
+        capital: "tunja",
       },
       {
-        manizales: "1",
+        capital: "manizales",
       },
       {
-        quibdo: "1",
+        capital: "quibdo",
       },
       {
-        monteria: "1",
+        capital: "monteria",
       },
     ],
   },
@@ -24,10 +24,10 @@ var jsonTexto = [
     Capital: "arauca",
     Conexion: [
       {
-        yopal: "1",
+        capital: "yopal",
       },
       {
-        bucaramanga: "1",
+        capital: "bucaramanga",
       },
     ],
   },
@@ -35,22 +35,22 @@ var jsonTexto = [
     Capital: "barranquilla",
     Conexion: [
       {
-        cartagena_de_indias: "1",
+        capital: "cartagena_de_indias",
       },
       {
-        valledupar: "1",
+        capital: "valledupar",
       },
     ],
   },
   {
     Capital: "cartagena_de_indias",
     Conexion: [
-      { barranquilla: "1" },
+      { capital: "barranquilla" },
       {
-        bucaramanga: "1",
+        capital: "bucaramanga",
       },
       {
-        sincelejo: "1",
+        capital: "sincelejo",
       },
     ],
   },
@@ -58,16 +58,16 @@ var jsonTexto = [
     Capital: "tunja",
     Conexion: [
       {
-        medellin: "1",
+        capital: "medellin",
       },
       {
-        yopal: "1",
+        capital: "yopal",
       },
       {
-        bogota: "1",
+        capital: "bogota",
       },
       {
-        bucaramanga: "1",
+        capital: "bucaramanga",
       },
     ],
   },
@@ -75,16 +75,16 @@ var jsonTexto = [
     Capital: "manizales",
     Conexion: [
       {
-        medellin: "1",
+        capital: "medellin",
       },
       {
-        bogota: "1",
+        capital: "bogota",
       },
       {
-        pereira: "1",
+        capital: "pereira",
       },
       {
-        ibague: "1",
+        capital: "ibague",
       },
     ],
   },
@@ -92,31 +92,41 @@ var jsonTexto = [
     Capital: "florencia",
     Conexion: [
       {
-        popayan: "1",
+        capital: "popayan",
       },
       {
-        mocoa: "1",
+        capital: "mocoa",
       },
     ],
   },
   {
     Capital: "yopal",
-    Conexion: [{ arauca: "1" }, { tunja: "1" }, { puerto_carreno: "1" }],
+    Conexion: [
+      {
+        capital: "arauca",
+      },
+      {
+        capital: "tunja",
+      },
+      {
+        capital: "puerto_carreno",
+      },
+    ],
   },
   {
     Capital: "popayan",
     Conexion: [
       {
-        florencia: "1",
+        capital: "florencia",
       },
       {
-        neiva: "1",
+        capital: "neiva",
       },
       {
-        pasto: "1",
+        capital: "pasto",
       },
       {
-        cali: "1",
+        capital: "cali",
       },
     ],
   },
@@ -124,16 +134,16 @@ var jsonTexto = [
     Capital: "valledupar",
     Conexion: [
       {
-        barranquilla: "1",
+        capital: "barranquilla",
       },
       {
-        riohacha: "1",
+        capital: "riohacha",
       },
       {
-        santa_marta: "1",
+        capital: "santa_marta",
       },
       {
-        san_jose_de_cucuta: "1",
+        capital: "san_jose_de_cucuta",
       },
     ],
   },
@@ -141,28 +151,35 @@ var jsonTexto = [
     Capital: "quibdo",
     Conexion: [
       {
-        medellin: "1",
+        capital: "medellin",
       },
     ],
   },
   {
     Capital: "monteria",
-    Conexion: [{ medellin: "1" }, { sincelejo: "1" }],
+    Conexion: [
+      {
+        capital: "medellin",
+      },
+      {
+        capital: "sincelejo",
+      },
+    ],
   },
   {
     Capital: "bogota",
     Conexion: [
       {
-        tunja: "1",
+        capital: "tunja",
       },
       {
-        manizales: "1",
+        capital: "manizales",
       },
       {
-        villavicencio: "1",
+        capital: "villavicencio",
       },
       {
-        ibague: "1",
+        capital: "ibague",
       },
     ],
   },
@@ -170,7 +187,7 @@ var jsonTexto = [
     Capital: "inirida",
     Conexion: [
       {
-        puerto_carreno: "1",
+        capital: "puerto_carreno",
       },
     ],
   },
@@ -178,7 +195,7 @@ var jsonTexto = [
     Capital: "san_jose_del_guaviare",
     Conexion: [
       {
-        villavicencio: "1",
+        capital: "villavicencio",
       },
     ],
   },
@@ -186,50 +203,96 @@ var jsonTexto = [
     Capital: "neiva",
     Conexion: [
       {
-        popayan: "1",
+        capital: "popayan",
       },
       {
-        ibague: "1",
+        capital: "ibague",
       },
     ],
   },
 
   {
     Capital: "riohacha",
-    Conexion: [{ valledupar: "1" }],
+    Conexion: [
+      {
+        capital: "valledupar",
+      },
+    ],
   },
   {
     Capital: "santa_marta",
-    Conexion: [{ valledupar: "1" }],
+    Conexion: [
+      {
+        capital: "valledupar",
+      },
+    ],
   },
   {
     Capital: "villavicencio",
-    Conexion: [{ bogota: "1" }, { san_jose_del_guaviare: "1" }],
+    Conexion: [
+      {
+        capital: "bogota",
+      },
+      {
+        capital: "san_jose_del_guaviare",
+      },
+    ],
   },
   {
     Capital: "pasto",
-    Conexion: [{ popayan: "1" }, { mocoa: "1" }],
+    Conexion: [
+      {
+        capital: "popayan",
+      },
+      {
+        capital: "mocoa",
+      },
+    ],
   },
   {
     Capital: "san_jose_de_cucuta",
-    Conexion: [{ valledupar: "1" }, { bucaramanga: "1" }],
+    Conexion: [
+      {
+        capital: "valledupar",
+      },
+      {
+        capital: "bucaramanga",
+      },
+    ],
   },
   {
     Capital: "mocoa",
-    Conexion: [{ florencia: "1" }, { pasto: "1" }],
+    Conexion: [
+      {
+        capital: "florencia",
+      },
+      {
+        capital: "pasto",
+      },
+    ],
   },
   {
     Capital: "armenia",
-    Conexion: [{ pereira: "1" }, { ibague: "1" }, { cali: "1" }],
+    Conexion: [
+      {
+        capital: "pereira",
+      },
+      {
+        capital: "ibague",
+      },
+      {
+        capital: "cali",
+      },
+    ],
   },
   {
     Capital: "pereira",
     Conexion: [
       {
-        manizales: "1",
+        capital: "manizales",
       },
       {
-        armenia: "1",
+        capital: "armenia",
       },
     ],
   },
@@ -243,19 +306,19 @@ var jsonTexto = [
     Capital: "bucaramanga",
     Conexion: [
       {
-        arauca: "1",
+        capital: "arauca",
       },
       {
-        cartagena_de_indias: "1",
+        capital: "cartagena_de_indias",
       },
       {
-        tunja: "1",
+        capital: "tunja",
       },
       {
-        san_jose_de_cucuta: "1",
+        capital: "san_jose_de_cucuta",
       },
       {
-        sincelejo: "1",
+        capital: "sincelejo",
       },
     ],
   },
@@ -264,13 +327,13 @@ var jsonTexto = [
     Capital: "sincelejo",
     Conexion: [
       {
-        cartagena_de_indias: "1",
+        capital: "cartagena_de_indias",
       },
       {
-        monteria: "1",
+        capital: "monteria",
       },
       {
-        bucaramanga: "1",
+        capital: "bucaramanga",
       },
     ],
   },
@@ -279,16 +342,16 @@ var jsonTexto = [
     Capital: "ibague",
     Conexion: [
       {
-        manizales: "1",
+        capital: "manizales",
       },
       {
-        bogota: "1",
+        capital: "bogota",
       },
       {
-        neiva: "1",
+        capital: "neiva",
       },
       {
-        armenia: "1",
+        capital: "armenia",
       },
     ],
   },
@@ -297,10 +360,10 @@ var jsonTexto = [
     Capital: "cali",
     Conexion: [
       {
-        popayan: "1",
+        capital: "popayan",
       },
       {
-        armenia: "1",
+        capital: "armenia",
       },
     ],
   },
@@ -314,10 +377,10 @@ var jsonTexto = [
     Capital: "puerto_carreno",
     Conexion: [
       {
-        yopal: "1",
+        capital: "yopal",
       },
       {
-        inirida: "1",
+        capital: "inirida",
       },
     ],
   },
