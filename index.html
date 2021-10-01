@@ -9,7 +9,7 @@
   <title>Aplicación de búsquedas rutas por Colombia (A-B)</title>
   <script type="text/javascript" src="eventos.js"></script>
   <script type="module" src="script.js"></script>
-  
+
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -73,12 +73,19 @@
 
       <div class="card fixed-bottom" style="margin:10px;text-shadow:none">
         <div class="card-body" style="padding:0px;">
-          <table class="table">
+          <div class="table">
+            <form id="Capitales" action="">
+              <label for="icap"> Inicio:
+                <input type="text" id="icap"></label>
+              <label for="fcap"> Final:
+                <input type="text" id="fcap"></label>
+              <input type="submit" value="enviar">
 
-          </table>
+            </form>
+          </div>
         </div>
       </div>
-      
+
       <!-- <script>
         var getData = function(){
           var icap = document.getElementById("icap").value;
@@ -89,7 +96,7 @@
         // export {icap, fcap}
       </script> -->
 
-      <form id="Capitales" action =""> 
+      <form id="Capitales" action="">
         <label for="icap"> Inicio: </label>
         <input type="text" id="icap">
         <label for="fcap"> Final: </label>
@@ -130,10 +137,7 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
   <script src="https://rawgit.com/Anujarya300/bubble_maps/master/data/geography-data/datamaps.none.js"></script>
   <script src="app.js"></script>
-  <!-- <script type="text/javascript" src="capitales.json"></script> -->
-  <!-- <script type="text/javascript" src="busqueda-profundidad.js"></script> -->
-
-
+  <script type="module" src="busqueda-profundidad.js"></script>
 
 
 </body>

@@ -1,17 +1,7 @@
 var map = new Datamap({
   element: document.getElementById("colombia"),
   scope: "colombia",
-  responsive: true, //if true, call `resize()` on the map object when it should adjust it's size
-  done: function () {}, //callback when the map is done drawing
-
-  fills: {
-    def: "#dddddd",
-    C1: "#ffa4a9",
-    C2: "#cc6674",
-    C3: "#993341",
-    C4: "#66000e",
-    defaultFill: "#dddddd",
-  },
+  responsive: true, //if true, call `resize()` on the map
 
   geographyConfig: {
     dataUrl: "colombia.topo.json",
