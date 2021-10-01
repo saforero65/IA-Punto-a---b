@@ -14,7 +14,7 @@ let formulario = document.getElementById("Capitales");
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
   console.log("Inicio: " + inicioCap.value);
-  console.log("Final" + finalCap.value);
+  console.log("Final: " + finalCap.value);
   cap_inicio = inicioCap.value;
   cap_final = finalCap.value;
   reset();
@@ -25,7 +25,7 @@ function busqueda() {
   encontrarNodo(cap_inicio);
   while (pila_ruta.length != 0 && encontrado == false) {
     i++;
-    console.log("iteracion: ", i);
+    
     let estado = recorreHijos();
     if (!estado) {
       sinconex.push(pila_ruta[pila_ruta.length - 1]);
@@ -39,6 +39,7 @@ function busqueda() {
       console.log("yaaaa");
     }
   }
+  console.log("iteraciones: ", i);
   console.log(pila_ruta);
 }
 
