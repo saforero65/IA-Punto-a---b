@@ -25,16 +25,29 @@ formulario.addEventListener("submit", (e) => {
   console.log("Final: " + finalCap.value);
   cap_inicio = inicioCap.value;
   cap_final = finalCap.value;
-  if (ruta.children.length > 1) {
+  if (ruta.children.length >= 1) {
     borrarListaRuta();
   }
   reset();
+  encontrarNodo(cap_inicio);
+  encontrarNodo(cap_final);
 
-  busqueda();
+  if((pila_ruta[0].Conexion.length == 0) || (pila_ruta[1].Conexion.length == 0)){
+    console.log("No hay rutas disponibles");
+    const itemList = document.createElement("LI");
+    itemList.textContent = "No hay rutas disponibles";
+    ruta.appendChild(itemList);
+  }
+  else{
+    pila_ruta.pop(pila_ruta[1]);
+    visitados.pop(visitados[1]);
+    busqueda();
+  } 
+
 });
 
 function busqueda() {
-  encontrarNodo(cap_inicio);
+  
   while (pila_ruta.length != 0 && encontrado == false) {
     i++;
 
