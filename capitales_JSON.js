@@ -2,7 +2,7 @@ var jsonTexto = [
   {
     Capital: "leticia",
     Conexion: [],
-    coordenadas: [327,568]
+    coordenadas: [327, 568],
   },
   {
     Capital: "medellin",
@@ -20,7 +20,7 @@ var jsonTexto = [
         capital: "monteria",
       },
     ],
-    coordenadas: [135,221]
+    coordenadas: [135, 221],
   },
   {
     Capital: "arauca",
@@ -32,7 +32,7 @@ var jsonTexto = [
         capital: "bucaramanga",
       },
     ],
-    coordenadas: [300,195]
+    coordenadas: [300, 195],
   },
   {
     Capital: "barranquilla",
@@ -44,7 +44,7 @@ var jsonTexto = [
         capital: "valledupar",
       },
     ],
-    coordenadas: [159,62]
+    coordenadas: [159, 62],
   },
   {
     Capital: "cartagena_de_indias",
@@ -57,7 +57,7 @@ var jsonTexto = [
         capital: "sincelejo",
       },
     ],
-    coordenadas: [137,80]
+    coordenadas: [137, 80],
   },
   {
     Capital: "tunja",
@@ -75,7 +75,7 @@ var jsonTexto = [
         capital: "bucaramanga",
       },
     ],
-    coordenadas: [212,245]
+    coordenadas: [212, 245],
   },
   {
     Capital: "manizales",
@@ -93,7 +93,7 @@ var jsonTexto = [
         capital: "ibague",
       },
     ],
-    coordenadas: [140,160]
+    coordenadas: [140, 260],
   },
   {
     Capital: "florencia",
@@ -105,7 +105,7 @@ var jsonTexto = [
         capital: "mocoa",
       },
     ],
-    coordenadas: [135,377]
+    coordenadas: [135, 377],
   },
   {
     Capital: "yopal",
@@ -120,7 +120,7 @@ var jsonTexto = [
         capital: "puerto_carreno",
       },
     ],
-  coordenadas: [243,252]
+    coordenadas: [243, 252],
   },
   {
     Capital: "popayan",
@@ -138,7 +138,7 @@ var jsonTexto = [
         capital: "cali",
       },
     ],
-    coordenadas: [100,352]
+    coordenadas: [100, 352],
   },
   {
     Capital: "valledupar",
@@ -156,7 +156,7 @@ var jsonTexto = [
         capital: "san_jose_de_cucuta",
       },
     ],
-    coordenadas: [213,77]
+    coordenadas: [213, 77],
   },
   {
     Capital: "quibdo",
@@ -165,7 +165,7 @@ var jsonTexto = [
         capital: "medellin",
       },
     ],
-    coordenadas: [100,239]
+    coordenadas: [100, 239],
   },
   {
     Capital: "monteria",
@@ -177,7 +177,7 @@ var jsonTexto = [
         capital: "sincelejo",
       },
     ],
-    coordenadas: [126,135]
+    coordenadas: [126, 135],
   },
   {
     Capital: "bogota",
@@ -195,7 +195,7 @@ var jsonTexto = [
         capital: "ibague",
       },
     ],
-    coordenadas: [185,278]
+    coordenadas: [185, 278],
   },
   {
     Capital: "inirida",
@@ -204,7 +204,7 @@ var jsonTexto = [
         capital: "puerto_carreno",
       },
     ],
-    coordenadas: [395,303]
+    coordenadas: [395, 303],
   },
   {
     Capital: "san_jose_del_guaviare",
@@ -213,7 +213,7 @@ var jsonTexto = [
         capital: "villavicencio",
       },
     ],
-    coordenadas: [247,347]
+    coordenadas: [247, 347],
   },
   {
     Capital: "neiva",
@@ -225,7 +225,7 @@ var jsonTexto = [
         capital: "ibague",
       },
     ],
-    coordenadas: [146,332]
+    coordenadas: [146, 332],
   },
 
   {
@@ -235,7 +235,7 @@ var jsonTexto = [
         capital: "valledupar",
       },
     ],
-    coordenadas: [228,41]
+    coordenadas: [228, 41],
   },
   {
     Capital: "santa_marta",
@@ -244,7 +244,7 @@ var jsonTexto = [
         capital: "valledupar",
       },
     ],
-    coordenadas: [186,51]
+    coordenadas: [186, 51],
   },
   {
     Capital: "villavicencio",
@@ -256,7 +256,7 @@ var jsonTexto = [
         capital: "san_jose_del_guaviare",
       },
     ],
-    coordenadas: [202,294]
+    coordenadas: [202, 294],
   },
   {
     Capital: "pasto",
@@ -268,7 +268,7 @@ var jsonTexto = [
         capital: "mocoa",
       },
     ],
-    coordenadas: [77,391]
+    coordenadas: [77, 391],
   },
   {
     Capital: "san_jose_de_cucuta",
@@ -280,7 +280,7 @@ var jsonTexto = [
         capital: "bucaramanga",
       },
     ],
-    coordenadas: [240,166]
+    coordenadas: [240, 166],
   },
   {
     Capital: "mocoa",
@@ -292,7 +292,7 @@ var jsonTexto = [
         capital: "pasto",
       },
     ],
-    coordenadas: [100,394]
+    coordenadas: [100, 394],
   },
   {
     Capital: "armenia",
@@ -307,7 +307,7 @@ var jsonTexto = [
         capital: "cali",
       },
     ],
-    coordenadas: [131,178]
+    coordenadas: [131, 178],
   },
   {
     Capital: "pereira",
@@ -319,13 +319,13 @@ var jsonTexto = [
         capital: "armenia",
       },
     ],
-    coordenadas: [133,269]
+    coordenadas: [133, 269],
   },
 
   {
     Capital: "san_andres",
     Conexion: [],
-    coordenadas: [0,0]
+    coordenadas: [0, 0],
   },
 
   {
@@ -347,7 +347,7 @@ var jsonTexto = [
         capital: "sincelejo",
       },
     ],
-    coordenadas: [218,193]
+    coordenadas: [218, 193],
   },
 
   {
@@ -363,7 +363,7 @@ var jsonTexto = [
         capital: "bucaramanga",
       },
     ],
-    coordenadas: [143,117]
+    coordenadas: [143, 117],
   },
 
   {
@@ -382,7 +382,7 @@ var jsonTexto = [
         capital: "armenia",
       },
     ],
-    coordenadas: [148,183]
+    coordenadas: [148, 183],
   },
 
   {
@@ -395,13 +395,13 @@ var jsonTexto = [
         capital: "armenia",
       },
     ],
-    coordenadas: [104,315]
+    coordenadas: [104, 315],
   },
 
   {
     Capital: "mitu",
     Conexion: [],
-    coordenadas: [318,390]
+    coordenadas: [318, 390],
   },
 
   {
@@ -414,7 +414,7 @@ var jsonTexto = [
         capital: "inirida",
       },
     ],
-    coordenadas: [408,224]
+    coordenadas: [408, 224],
   },
 ];
 export let red = JSON.parse(JSON.stringify(jsonTexto));

@@ -8,6 +8,7 @@ let pila_ruta = new Array();
 let visitados = new Array();
 let sinconex = new Array();
 let ciudades = new Array();
+
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 
@@ -15,13 +16,20 @@ let inicioCap = document.getElementById("icap");
 let finalCap = document.getElementById("fcap");
 let formulario = document.getElementById("Capitales");
 
+let ruta = document.getElementById("ruta");
+const fragment = document.createDocumentFragment();
+
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
   console.log("Inicio: " + inicioCap.value);
   console.log("Final: " + finalCap.value);
   cap_inicio = inicioCap.value;
   cap_final = finalCap.value;
+  if (ruta.children.length > 1) {
+    borrarListaRuta();
+  }
   reset();
+
   busqueda();
 });
 
@@ -29,7 +37,7 @@ function busqueda() {
   encontrarNodo(cap_inicio);
   while (pila_ruta.length != 0 && encontrado == false) {
     i++;
-    
+
     let estado = recorreHijos();
     if (!estado) {
       sinconex.push(pila_ruta[pila_ruta.length - 1]);
@@ -46,6 +54,7 @@ function busqueda() {
   console.log("iteraciones: ", i);
   console.log(pila_ruta);
   dibujito(pila_ruta);
+  mostrarListaRuta();
 }
 
 function encontrarNodo(referencia) {
@@ -79,6 +88,7 @@ function reset() {
   visitados.splice(0, visitados.length);
   sinconex.splice(0, sinconex.length);
   ciudades.splice(0, ciudades.length);
+  // ruta.removeChild(fragment);
 
   ctx.clearRect(0, 0, 500, 600);
 
@@ -86,8 +96,8 @@ function reset() {
   i = 0;
 }
 
-function dibujito(arreglo){
-  ctx.fillStyle = "#50336700";
+function dibujito(arreglo) {
+  ctx.fillStyle = "#ffffff00";
   ctx.fillRect(0, 0, c.width, c.height);
 
   let x = 0;
@@ -100,36 +110,33 @@ function dibujito(arreglo){
   console.log(ciudades);
 
   ctx.lineWidth = 1;
-  ctx.setLineDash([5,5]);
+  ctx.setLineDash([5, 5]);
   ctx.beginPath();
-      
+
   function dibruta(x, y, x2, y2) {
-      ctx.setLineDash([7,7]);
-      ctx.beginPath();
-      ctx.moveTo(x, y);
-      ctx.lineTo(x2, y2);
-      ctx.stroke();
+    ctx.setLineDash([7, 7]);
+    ctx.beginPath();
+    ctx.moveTo(x, y);
+    ctx.lineTo(x2, y2);
+    ctx.stroke();
   }
 
-  for (let i = 0; i < (ciudades.length)-1; i++) {
+  for (let i = 0; i < ciudades.length - 1; i++) {
+    x = ciudades[i].coordenadas[0];
+    y = ciudades[i].coordenadas[1];
 
-      x = ciudades[i].coordenadas[0];
-      y = ciudades[i].coordenadas[1];
+    x2 = ciudades[i + 1].coordenadas[0];
+    y2 = ciudades[i + 1].coordenadas[1];
 
-      x2 = ciudades[i+1].coordenadas[0];
-      y2 = ciudades[i+1].coordenadas[1];
-
-      setTimeout(dibruta, 700 * count++, x, y, x2, y2);
-
+    setTimeout(dibruta, 700 * count++, x, y, x2, y2);
   }
 
-
-  ctx.strokeStyle = '#000';
+  ctx.strokeStyle = "#000";
   ctx.lineCap = "round";
-  ctx.lineJoin='round'
+  ctx.lineJoin = "round";
   ctx.fillStyle = "#000000";
   ctx.lineWidth = 5;
-  ctx.setLineDash([1,1]);
+  ctx.setLineDash([1, 1]);
 
   // for (let i = 0; i < (red.length); i++) {
 
@@ -143,17 +150,28 @@ function dibujito(arreglo){
   // }
 
   //GRAFICAR PUNTOS RUTA
-  for (let i = 0; i < (ciudades.length); i++) {
+  for (let i = 0; i < ciudades.length; i++) {
+    x = ciudades[i].coordenadas[0];
+    y = ciudades[i].coordenadas[1];
 
-      x = ciudades[i].coordenadas[0];
-      y = ciudades[i].coordenadas[1];
-
-      ctx.beginPath();
-      ctx.arc(x, y, 3, 0, Math.PI * 2, true);
-      ctx.fill();
-      ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(x, y, 3, 0, Math.PI * 2, true);
+    ctx.fill();
+    ctx.stroke();
   }
 
   // dibruta(ciudades);
-
+}
+function mostrarListaRuta() {
+  for (const capital of pila_ruta) {
+    const itemList = document.createElement("LI");
+    itemList.textContent = capital.Capital;
+    fragment.appendChild(itemList);
+  }
+  ruta.appendChild(fragment);
+}
+function borrarListaRuta() {
+  while (ruta.firstChild) {
+    ruta.removeChild(ruta.firstChild);
+  }
 }

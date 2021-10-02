@@ -29,3 +29,21 @@ h2 {
 .hover {
   fill: yellow;
 }
+.mapa {
+  background-image: url("img/co.svg");
+  background-size: contain;
+  background-position: -72px -31px;
+}
+main {
+  margin: 4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+}
+.ancho-cajas {
+  width: auto;
+  margin: 1rem;
+}
+form {
+  margin-top: 5rem;
+}
