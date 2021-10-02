@@ -307,7 +307,7 @@ var jsonTexto = [
         capital: "cali",
       },
     ],
-    coordenadas: [131, 178],
+    coordenadas: [131, 278],
   },
   {
     Capital: "pereira",
@@ -382,7 +382,7 @@ var jsonTexto = [
         capital: "armenia",
       },
     ],
-    coordenadas: [148, 183],
+    coordenadas: [148, 283],
   },
 
   {
