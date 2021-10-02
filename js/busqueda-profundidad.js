@@ -126,6 +126,8 @@ function dibujito(arreglo) {
   function dibruta(x, y, x2, y2) {
     ctx.setLineDash([7, 7]);
     ctx.beginPath();
+    ctx.strokeStyle = "#000";
+    ctx.lineWidth = 2;
     ctx.moveTo(x, y);
     ctx.lineTo(x2, y2);
     ctx.stroke();
@@ -138,13 +140,12 @@ function dibujito(arreglo) {
     x2 = ciudades[i + 1].coordenadas[0];
     y2 = ciudades[i + 1].coordenadas[1];
 
-    setTimeout(dibruta, 700 * count++, x, y, x2, y2);
+    setTimeout(dibruta, 500 * count++, x, y, x2, y2);
   }
 
-  ctx.strokeStyle = "#000";
+
   ctx.lineCap = "round";
   ctx.lineJoin = "round";
-  ctx.fillStyle = "#000000";
   ctx.lineWidth = 5;
   ctx.setLineDash([1, 1]);
 
@@ -165,6 +166,8 @@ function dibujito(arreglo) {
     y = ciudades[i].coordenadas[1];
 
     ctx.beginPath();
+    ctx.strokeStyle = "#05512d";
+    ctx.fillStyle = "#05512d";
     ctx.arc(x, y, 3, 0, Math.PI * 2, true);
     ctx.fill();
     ctx.stroke();
