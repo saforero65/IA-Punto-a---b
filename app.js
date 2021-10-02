@@ -1,31 +1,34 @@
-var map = new Datamap({
-  element: document.getElementById("colombia"),
-  scope: "colombia",
-  responsive: true, //if true, call `resize()` on the map
+var width = window.innerWidth,
+  height = window.innerHeight;
 
-  geographyConfig: {
-    dataUrl: "colombia.topo.json",
-  },
+var svg = d3
+  .select("body")
+  .append("svg")
+  .attr("width", width)
+  .attr("height", height);
 
-  setProjection: function (element) {
-    var projection = d3.geo
-      .mercator()
-      .center([-74, 3])
-      .scale(element.offsetWidth * 4)
-      .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
-    var path = d3.geo.path().projection(projection);
-    return { path: path, projection: projection };
-  },
-});
+var projection = d3.geo
+  .mercator()
+  .scale(1500)
+  // Center the Map in Colombia
+  .center([-75, 4.5])
+  .translate([width / 2, height / 2]);
 
-window.addEventListener("resize", function (event) {
-  map.resize();
-});
+var geoPath = d3.geo.path().projection(projection);
 
-$(document).ready(function () {
-  setTimeout(function () {
-    $("body").addClass("loaded");
-    $("h1").css("color", "#222222");
-  }, 1000);
-  //$('#exampleModalCenter').modal('show');
-});
+svg
+  .append("g")
+  .selectAll("path")
+  .data(counties.features)
+  .enter()
+  .append("path")
+  .attr("d", geoPath)
+  .attr("class", "county")
+  .on("mouseover", function (d) {
+    d3.select("h2").text(d.properties.NOMBRE_DPT);
+    d3.select(this).attr("class", "county hover");
+  })
+  .on("mouseout", function (d) {
+    d3.select("h2").text("");
+    d3.select(this).attr("class", "county");
+  });
