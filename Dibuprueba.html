@@ -20,19 +20,46 @@ let x = 0;
 let y = 0;
 let x2 = 0;
 let y2 = 0;
+let count = 1;
 
-ciudades.push(red[6]);
-ciudades.push(red[1]);
-ciudades.push(red[5]);
-ciudades.push(red[8]);
+
+ciudades.push(red[10]);
+ciudades.push(red[4]);
+ciudades.push(red[31]);
+ciudades.push(red[13]);
+ciudades.push(red[13]);
 
 console.log(ciudades);
+
+ctx.lineWidth = 2;
+
+    
+function dibruta(x, y, x2, y2) {
+    ctx.setLineDash([6,6]);
+    ctx.beginPath();
+    ctx.moveTo(x, y);
+    ctx.lineTo(x2, y2);
+    ctx.stroke();
+}
+
+for (let i = 0; i < (ciudades.length)-1; i++) {
+
+    x = ciudades[i].coordenadas[0];
+    y = ciudades[i].coordenadas[1];
+
+    x2 = ciudades[i+1].coordenadas[0];
+    y2 = ciudades[i+1].coordenadas[1];
+
+    setTimeout(dibruta, 700 * count++, x, y, x2, y2);
+
+}
+
+
 
 ctx.strokeStyle = '#000';
 ctx.lineCap = "round";
 ctx.lineJoin='round'
-
-ctx.strokeStyle = '#000';
+ctx.fillStyle = "#000000";
 ctx.lineWidth = 5;
 ctx.setLineDash([1,1]);
 
@@ -59,25 +86,10 @@ for (let i = 0; i < (red.length); i++) {
 //     ctx.stroke();
 // }
 
+// dibruta(ciudades);
 
-ctx.lineWidth = 2;
 
-ctx.setLineDash([5,5]);
-ctx.beginPath();
 
-for (let i = 0; i < (ciudades.length)-1; i++) {
-
-    x = ciudades[i].coordenadas[0];
-    y = ciudades[i].coordenadas[1];
-
-    x2 = ciudades[i+1].coordenadas[0];
-    y2 = ciudades[i+1].coordenadas[1];
-
-    
-    ctx.moveTo(x, y);
-    ctx.lineTo(x2, y2);
-    ctx.stroke();
-}
 
 
 
