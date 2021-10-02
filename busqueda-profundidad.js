@@ -8,6 +8,8 @@ let pila_ruta = new Array();
 let visitados = new Array();
 let sinconex = new Array();
 let ciudades = new Array();
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
 
 let inicioCap = document.getElementById("icap");
 let finalCap = document.getElementById("fcap");
@@ -78,15 +80,14 @@ function reset() {
   sinconex.splice(0, sinconex.length);
   ciudades.splice(0, ciudades.length);
 
+  ctx.clearRect(0, 0, 500, 600);
+
   encontrado = false;
   i = 0;
 }
 
 function dibujito(arreglo){
-
-  var c = document.getElementById("myCanvas");
-  var ctx = c.getContext("2d");
-  ctx.fillStyle = "#50336750";
+  ctx.fillStyle = "#50336700";
   ctx.fillRect(0, 0, c.width, c.height);
 
   let x = 0;
@@ -130,28 +131,28 @@ function dibujito(arreglo){
   ctx.lineWidth = 5;
   ctx.setLineDash([1,1]);
 
-  for (let i = 0; i < (red.length); i++) {
+  // for (let i = 0; i < (red.length); i++) {
 
-      x = red[i].coordenadas[0];
-      y = red[i].coordenadas[1];
-
-      ctx.beginPath();
-      ctx.arc(x, y, 3, 0, Math.PI * 2, true);
-      ctx.fill();
-      ctx.stroke();
-  }
-
-  //GRAFICAR PUNTOS RUTA
-  // for (let i = 0; i < (ciudades.length); i++) {
-
-  //     x = ciudades[i].coordenadas[0];
-  //     y = ciudades[i].coordenadas[1];
+  //     x = red[i].coordenadas[0];
+  //     y = red[i].coordenadas[1];
 
   //     ctx.beginPath();
   //     ctx.arc(x, y, 3, 0, Math.PI * 2, true);
   //     ctx.fill();
   //     ctx.stroke();
   // }
+
+  //GRAFICAR PUNTOS RUTA
+  for (let i = 0; i < (ciudades.length); i++) {
+
+      x = ciudades[i].coordenadas[0];
+      y = ciudades[i].coordenadas[1];
+
+      ctx.beginPath();
+      ctx.arc(x, y, 3, 0, Math.PI * 2, true);
+      ctx.fill();
+      ctx.stroke();
+  }
 
   // dibruta(ciudades);
 
