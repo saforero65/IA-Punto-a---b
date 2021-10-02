@@ -2,7 +2,7 @@ var width = window.innerWidth,
   height = window.innerHeight;
 
 var svg = d3
-  .select("body")
+  .select("mapa")
   .append("svg")
   .attr("width", width)
   .attr("height", height);
