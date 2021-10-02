@@ -32,22 +32,19 @@ formulario.addEventListener("submit", (e) => {
   encontrarNodo(cap_inicio);
   encontrarNodo(cap_final);
 
-  if((pila_ruta[0].Conexion.length == 0) || (pila_ruta[1].Conexion.length == 0)){
+  if (pila_ruta[0].Conexion.length == 0 || pila_ruta[1].Conexion.length == 0) {
     console.log("No hay rutas disponibles");
     const itemList = document.createElement("LI");
     itemList.textContent = "No hay rutas disponibles";
     ruta.appendChild(itemList);
-  }
-  else{
+  } else {
     pila_ruta.pop(pila_ruta[1]);
     visitados.pop(visitados[1]);
     busqueda();
-  } 
-
+  }
 });
 
 function busqueda() {
-  
   while (pila_ruta.length != 0 && encontrado == false) {
     i++;
 
