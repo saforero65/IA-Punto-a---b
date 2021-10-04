@@ -1,0 +1,419 @@
+[
+    {
+      "Capital": "leticia",
+      "Conexion": [],
+      "coordenadas": [327, 568]
+    },
+    {
+      "Capital": "medellin",
+      "Conexion": [
+        {
+          "Capital": "tunja"
+        },
+        {
+          "Capital": "manizales"
+        },
+        {
+          "Capital": "quibdo"
+        },
+        {
+          "Capital": "monteria"
+        }
+      ],
+      "coordenadas": [135, 221]
+    },
+    {
+      "Capital": "arauca",
+      "Conexion": [
+        {
+          "Capital": "yopal"
+        },
+        {
+          "Capital": "bucaramanga"
+        }
+      ],
+      "coordenadas": [300, 195]
+    },
+    {
+      "Capital": "barranquilla",
+      "Conexion": [
+        {
+          "Capital": "cartagena_de_indias"
+        },
+        {
+          "Capital": "valledupar"
+        }
+      ],
+      "coordenadas": [159, 62]
+    },
+    {
+      "Capital": "cartagena_de_indias",
+      "Conexion": [
+        { "Capital": "barranquilla" },
+        {
+          "Capital": "bucaramanga"
+        },
+        {
+          "Capital": "sincelejo"
+        }
+      ],
+      "coordenadas": [137, 80]
+    },
+    {
+      "Capital": "tunja",
+      "Conexion": [
+        {
+          "Capital": "medellin"
+        },
+        {
+          "Capital": "yopal"
+        },
+        {
+          "Capital": "bogota"
+        },
+        {
+          "Capital": "bucaramanga"
+        }
+      ],
+      "coordenadas": [212, 245]
+    },
+    {
+      "Capital": "manizales",
+      "Conexion": [
+        {
+          "Capital": "medellin"
+        },
+        {
+          "Capital": "bogota"
+        },
+        {
+          "Capital": "pereira"
+        },
+        {
+          "Capital": "ibague"
+        }
+      ],
+      "coordenadas": [140, 260]
+    },
+    {
+      "Capital": "florencia",
+      "Conexion": [
+        {
+          "Capital": "popayan"
+        },
+        {
+          "Capital": "mocoa"
+        }
+      ],
+      "coordenadas": [135, 377]
+    },
+    {
+      "Capital": "yopal",
+      "Conexion": [
+        {
+          "Capital": "arauca"
+        },
+        {
+          "Capital": "tunja"
+        },
+        {
+          "Capital": "puerto_carreno"
+        }
+      ],
+      "coordenadas": [243, 252]
+    },
+    {
+      "Capital": "popayan",
+      "Conexion": [
+        {
+          "Capital": "florencia"
+        },
+        {
+          "Capital": "neiva"
+        },
+        {
+          "Capital": "pasto"
+        },
+        {
+          "Capital": "cali"
+        }
+      ],
+      "coordenadas": [100, 352]
+    },
+    {
+      "Capital": "valledupar",
+      "Conexion": [
+        {
+          "Capital": "barranquilla"
+        },
+        {
+          "Capital": "riohacha"
+        },
+        {
+          "Capital": "santa_marta"
+        },
+        {
+          "Capital": "san_jose_de_cucuta"
+        }
+      ],
+      "coordenadas": [213, 77]
+    },
+    {
+      "Capital": "quibdo",
+      "Conexion": [
+        {
+          "Capital": "medellin"
+        }
+      ],
+      "coordenadas": [100, 239]
+    },
+    {
+      "Capital": "monteria",
+      "Conexion": [
+        {
+          "Capital": "medellin"
+        },
+        {
+          "Capital": "sincelejo"
+        }
+      ],
+      "coordenadas": [126, 135]
+    },
+    {
+      "Capital": "bogota",
+      "Conexion": [
+        {
+          "Capital": "tunja"
+        },
+        {
+          "Capital": "manizales"
+        },
+        {
+          "Capital": "villavicencio"
+        },
+        {
+          "Capital": "ibague"
+        }
+      ],
+      "coordenadas": [185, 278]
+    },
+    {
+      "Capital": "inirida",
+      "Conexion": [
+        {
+          "Capital": "puerto_carreno"
+        }
+      ],
+      "coordenadas": [395, 303]
+    },
+    {
+      "Capital": "san_jose_del_guaviare",
+      "Conexion": [
+        {
+          "Capital": "villavicencio"
+        }
+      ],
+      "coordenadas": [247, 347]
+    },
+    {
+      "Capital": "neiva",
+      "Conexion": [
+        {
+          "Capital": "popayan"
+        },
+        {
+          "Capital": "ibague"
+        }
+      ],
+      "coordenadas": [146, 332]
+    },
+  
+    {
+      "Capital": "riohacha",
+      "Conexion": [
+        {
+          "Capital": "valledupar"
+        }
+      ],
+      "coordenadas": [228, 41]
+    },
+    {
+      "Capital": "santa_marta",
+      "Conexion": [
+        {
+          "Capital": "valledupar"
+        }
+      ],
+      "coordenadas": [186, 51]
+    },
+    {
+      "Capital": "villavicencio",
+      "Conexion": [
+        {
+          "Capital": "bogota"
+        },
+        {
+          "Capital": "san_jose_del_guaviare"
+        }
+      ],
+      "coordenadas": [202, 294]
+    },
+    {
+      "Capital": "pasto",
+      "Conexion": [
+        {
+          "Capital": "popayan"
+        },
+        {
+          "Capital": "mocoa"
+        }
+      ],
+      "coordenadas": [77, 391]
+    },
+    {
+      "Capital": "san_jose_de_cucuta",
+      "Conexion": [
+        {
+          "Capital": "valledupar"
+        },
+        {
+          "Capital": "bucaramanga"
+        }
+      ],
+      "coordenadas": [240, 166]
+    },
+    {
+      "Capital": "mocoa",
+      "Conexion": [
+        {
+          "Capital": "florencia"
+        },
+        {
+          "Capital": "pasto"
+        }
+      ],
+      "coordenadas": [100, 394]
+    },
+    {
+      "Capital": "armenia",
+      "Conexion": [
+        {
+          "Capital": "pereira"
+        },
+        {
+          "Capital": "ibague"
+        },
+        {
+          "Capital": "cali"
+        }
+      ],
+      "coordenadas": [131, 278]
+    },
+    {
+      "Capital": "pereira",
+      "Conexion": [
+        {
+          "Capital": "manizales"
+        },
+        {
+          "Capital": "armenia"
+        }
+      ],
+      "coordenadas": [133, 269]
+    },
+  
+    {
+      "Capital": "san_andres",
+      "Conexion": [],
+      "coordenadas": [0, 0]
+    },
+  
+    {
+      "Capital": "bucaramanga",
+      "Conexion": [
+        {
+          "Capital": "arauca"
+        },
+        {
+          "Capital": "cartagena_de_indias"
+        },
+        {
+          "Capital": "tunja"
+        },
+        {
+          "Capital": "san_jose_de_cucuta"
+        },
+        {
+          "Capital": "sincelejo"
+        }
+      ],
+      "coordenadas": [218, 193]
+    },
+  
+    {
+      "Capital": "sincelejo",
+      "Conexion": [
+        {
+          "Capital": "cartagena_de_indias"
+        },
+        {
+          "Capital": "monteria"
+        },
+        {
+          "Capital": "bucaramanga"
+        }
+      ],
+      "coordenadas": [143, 117]
+    },
+  
+    {
+      "Capital": "ibague",
+      "Conexion": [
+        {
+          "Capital": "manizales"
+        },
+        {
+          "Capital": "bogota"
+        },
+        {
+          "Capital": "neiva"
+        },
+        {
+          "Capital": "armenia"
+        }
+      ],
+      "coordenadas": [148, 283]
+    },
+  
+    {
+      "Capital": "cali",
+      "Conexion": [
+        {
+          "Capital": "popayan"
+        },
+        {
+          "Capital": "armenia"
+        }
+      ],
+      "coordenadas": [104, 315]
+    },
+  
+    {
+      "Capital": "mitu",
+      "Conexion": [],
+      "coordenadas": [318, 390]
+    },
+  
+    {
+      "Capital": "puerto_carreno",
+      "Conexion": [
+        {
+          "Capital": "yopal"
+        },
+        {
+          "Capital": "inirida"
+        }
+      ],
+      "coordenadas": [408, 224]
+    }
+  ]
