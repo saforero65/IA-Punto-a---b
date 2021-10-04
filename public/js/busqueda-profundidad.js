@@ -8,6 +8,7 @@ let pila_ruta = new Array();
 let visitados = new Array();
 let sinconex = new Array();
 let ciudades = new Array(); //array para graficar
+let registro_busquedas = new Array();
 
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
@@ -17,7 +18,9 @@ let finalCap = document.getElementById("fcap");
 let formulario = document.getElementById("Capitales");
 
 let ruta = document.getElementById("ruta");
+let registro = document.getElementById("registro");
 const fragment = document.createDocumentFragment();
+const fragment2 = document.createDocumentFragment();
 
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -25,9 +28,9 @@ formulario.addEventListener("submit", (e) => {
   console.log("Final: " + finalCap.value);
   cap_inicio = inicioCap.value;
   cap_final = finalCap.value;
-  if (ruta.children.length >= 1) {
-    borrarListaRuta();
-  }
+
+  borrarListaRuta();
+
   reset();
   encontrarNodo(cap_inicio);
   encontrarNodo(cap_final);
@@ -59,6 +62,8 @@ function busqueda() {
     if (pila_ruta[pila_ruta.length - 1].Capital == cap_final) {
       encontrado = true;
       console.log("yaaaa");
+      let temp = pila_ruta.slice();
+      registro_busquedas.push(temp);
     }
   }
   console.log("iteraciones: ", i);
@@ -98,7 +103,6 @@ function reset() {
   visitados.splice(0, visitados.length);
   sinconex.splice(0, sinconex.length);
   ciudades.splice(0, ciudades.length);
-  // ruta.removeChild(fragment);
 
   ctx.clearRect(0, 0, 500, 600);
 
@@ -148,17 +152,6 @@ function dibujito(arreglo) {
   ctx.lineWidth = 5;
   ctx.setLineDash([1, 1]);
 
-  // for (let i = 0; i < (red.length); i++) {
-
-  //     x = red[i].coordenadas[0];
-  //     y = red[i].coordenadas[1];
-
-  //     ctx.beginPath();
-  //     ctx.arc(x, y, 3, 0, Math.PI * 2, true);
-  //     ctx.fill();
-  //     ctx.stroke();
-  // }
-
   //GRAFICAR PUNTOS RUTA
   for (let i = 0; i < ciudades.length; i++) {
     x = ciudades[i].coordenadas[0];
@@ -181,9 +174,26 @@ function mostrarListaRuta() {
     fragment.appendChild(itemList);
   }
   ruta.appendChild(fragment);
+  let ruta_registro = "";
+  for (const item of registro_busquedas) {
+    ruta_registro = "";
+    for (let capital of item) {
+      console.log(capital.Capital);
+      ruta_registro = ruta_registro + " " + capital.Capital + ",";
+    }
+    console.log("ruta:" + ruta_registro);
+    const itemList = document.createElement("LI");
+    itemList.textContent = ruta_registro;
+
+    fragment2.appendChild(itemList);
+  }
+  registro.appendChild(fragment2);
 }
 function borrarListaRuta() {
   while (ruta.firstChild) {
     ruta.removeChild(ruta.firstChild);
+  }
+  while (registro.firstChild) {
+    registro.removeChild(registro.firstChild);
   }
 }
